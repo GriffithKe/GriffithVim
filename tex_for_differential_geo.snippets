@@ -1,4 +1,4 @@
-snippet mk "Math" wA
+snippet mk "Math" iA
 $${1}$`!p
 if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
 	snip.rv = ' '
@@ -7,7 +7,7 @@ else:
 `$2
 endsnippet
 
-snippet dm "Math" wA
+snippet dm "Math" iA
 \[
 ${1:${VISUAL}}
 .\] $0
@@ -25,17 +25,15 @@ snippet td "superscript" iA
 ^{$1}$0
 endsnippet
 
-priority 10
 snippet "bar" "bar" riA
 \overline{$1}$0
 endsnippet
 
-priority 10
 snippet "hat" "hat" riA
 \hat{$1}$0
 endsnippet
 
-snippet mytem "my template for differential geometry" b
+snippet mytem "my template for differential geometry" bA
 \documentclass[a4paper,12pt]{article}
 \usepackage{alltt}
 \usepackage{amsfonts}
@@ -139,7 +137,6 @@ snippet mytem "my template for differential geometry" b
 \theoremstyle{marginbreak}
 \theoremsymbol{\ensuremath{QED}}
 \newtheorem*{prf}{Proof}
-
 \begin{document}
 	$0
 \end{document}
@@ -175,83 +172,67 @@ snippet brmk "remark block" bA
 \end{rmk}
 endsnippet
 
-priority 1
 snippet real3 "three dimensional space" iA
 \R^3
 endsnippet
 
-priority 1
 snippet cdot "cdot" iA
 \cdot
 endsnippet
 
-priority 1
 snippet alpha "alpha" iA
 \alpha
 endsnippet
 
-priority 1
 snippet beta "beta" iA
 \beta
 endsnippet
 
-priority 1
 snippet gamma "gamma" iA
 \gamma
 endsnippet
 
-priority 1
 snippet curvea "curve named alpha" iA
 \alpha(t)
 endsnippet
 
-priority 1
 snippet curveb "curve named beta" iA
 \beta(t)
 endsnippet
 
-priority 1
 snippet curvey "curve named gamma" iA
 \gamma(t)
 endsnippet
 
-priority 1
 snippet dcurvea "derivative of curve named alpha" iA
 \alpha'(t)
 endsnippet
 
-priority 1
 snippet dcurveb "derivative of curve named beta" iA
 \beta'(t)
 endsnippet
 
-priority 1
 snippet dcurvey "derivative of curve named gamma" iA
 \gamma'(t)
 endsnippet
 
-priority 1
 snippet cnorm "norm" iA
 \|$0\|
 endsnippet
 
-priority 1
 snippet cvela "alpha curve velocity" iA
 \|\alpha'(t)\|
 endsnippet
 
-priority 1
 snippet cvelb "beta curve velocity" iA
 \|\beta'(t)\|
 endsnippet
 
-priority 1
 snippet cvely "gamma curve velocity" iA
 \|\gamma'(t)\|
 endsnippet
 
-snippet bmat "matrix" bA
-\begin{bmatrix}
-	$0
-\end{bmatrix}
-endsnippet 
+snippet bmat "matrix" iA
+\begin{bmatrix} $1 \end{bmatrix} $0
+endsnippet
+ 
