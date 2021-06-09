@@ -142,6 +142,18 @@ snippet mytem "my template for differential geometry" bA
 \end{document}
 endsnippet
 
+snippet drawsaddle "draw a saddle with tikz" b
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}
+            \addplot3 [surf,shader=flat,draw=black] {x^2-y^2};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{saddle}
+\end{figure}
+endsnippet
+
 snippet bdefi "definition block" bA
 \begin{defi}[$1]
 	$0
@@ -172,6 +184,12 @@ snippet brmk "remark block" bA
 \end{rmk}
 endsnippet
 
+snippet bfact "fact block" bA
+\begin{fact}
+	$0
+\end{fact}
+endsnippet
+
 snippet real3 "three dimensional space" iA
 \R^3
 endsnippet
@@ -180,7 +198,7 @@ snippet cdot "cdot" iA
 \cdot
 endsnippet
 
-snippet alpha "alpha" iA
+snippet alp "alpha" iA
 \alpha
 endsnippet
 
@@ -190,6 +208,18 @@ endsnippet
 
 snippet gamma "gamma" iA
 \gamma
+endsnippet
+
+snippet sin "sine function" i
+\sin($1)$0
+endsnippet
+
+snippet cos "cosine function" i
+\cos($1)$0
+endsnippet
+
+snippet tan "tangent function" i
+\tan($1)$0
 endsnippet
 
 snippet curvea "curve named alpha" iA
