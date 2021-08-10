@@ -1,0 +1,268 @@
+snippet mk "Math" iA
+$${1}$`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+	snip.rv = ' '
+else:
+	snip.rv = ''
+`$2
+endsnippet
+
+snippet dm "Math" iA
+\[
+${1:${VISUAL}}
+.\] $0
+endsnippet
+
+snippet '([A-Za-z])(\d)' "auto subscript" wrA
+`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+endsnippet
+
+snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
+`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
+endsnippet
+
+snippet td "superscript" iA
+^{$1}$0
+endsnippet
+
+snippet "bar" "bar" riA
+\overline{$1}$0
+endsnippet
+
+snippet "hat" "hat" riA
+\hat{$1}$0
+endsnippet
+
+snippet mytem "my template for differential geometry" bA
+\documentclass[a4paper,12pt]{article}
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{etoolbox}
+\usepackage{fancyhdr}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage[thmmarks]{ntheorem}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{setspace}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage{thmtools}
+\usepackage[all]{xy}
+\usepackage{imakeidx}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{positioning}
+\usetikzlibrary{fadings}
+\usetikzlibrary{intersections}
+\usetikzlibrary{cd}
+% Example
+\theoremstyle{marginbreak}
+\theoremsymbol{\ensuremath{\square}}
+\theoremseparator{.}
+\newtheorem{eg}{Example}[section]
+% Problem
+\theoremstyle{marginbreak}
+\theoremsymbol{\ensuremath{\square}}
+\theoremseparator{.}
+\newtheorem{problem}{Problem}[section]
+% Definition
+\theoremstyle{marginbreak}
+\theoremsymbol{\ensuremath{\square}}
+\theoremseparator{.}
+\newtheorem{defi}{Definition}[section]
+% Theorem
+\theoremstyle{marginbreak}
+\theoremsymbol{\ensuremath{\square}}
+\theoremseparator{.}
+\newtheorem{thm}{Theorem}[section]
+% Corollary
+\theoremstyle{marginbreak}
+\theoremsymbol{\ensuremath{\square}}
+\theoremseparator{.}
+\newtheorem{cor}{Corollary}[section]
+% Exercise
+\theoremstyle{marginbreak}
+\theoremsymbol{\ensuremath{\square}}
+\theoremseparator{.}
+\newtheorem{ex}{Exercise}[section]
+% Fact
+\theoremstyle{marginbreak}
+\theoremsymbol{\ensuremath{\square}}
+\theoremseparator{.}
+\newtheorem{fact}{Fact}[section]
+% Remark
+\theoremstyle{marginbreak}
+\theoremsymbol{\ensuremath{\square}}
+\theoremseparator{.}
+\theoremprework{\bigskip\hrule}
+\theorempostwork{\hrule\bigskip}
+\newtheorem{rmk}{Remark}[section]
+% Lemma
+\theoremstyle{marginbreak}
+\theoremsymbol{\ensuremath{\square}}
+\theoremseparator{.}
+\newtheorem{lemma}{Lemma}[section]
+% Notation
+\theoremstyle{marginbreak}
+\theoremsymbol{\ensuremath{\square}}
+\theoremseparator{.}
+\newtheorem{notation}{Notation}[section]
+% Proposition
+\theoremstyle{marginbreak}
+\theoremsymbol{\ensuremath{\square}}
+\theoremseparator{.}
+\newtheorem{prop}{Proposition}[section]
+% Assumption
+\theoremstyle{marginbreak}
+\theoremsymbol{\ensuremath{\square}}
+\theoremseparator{.}
+\newtheorem{assumption}{Assumption}[section]
+% Proof
+\theoremstyle{marginbreak}
+\theoremsymbol{\ensuremath{QED}}
+\newtheorem*{prf}{Proof}
+\begin{document}
+	$0
+\end{document}
+endsnippet
+
+snippet drawsaddle "draw a saddle with tikz" b
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}
+            \addplot3 [surf,shader=flat,draw=black] {x^2-y^2};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{saddle}
+\end{figure}
+endsnippet
+
+snippet bdefi "definition block" bA
+\begin{defi}[$1]
+	$0
+\end{defi}
+endsnippet
+
+snippet bprop "proposition block" bA
+\begin{prop}[$1]
+	$0
+\end{prop}
+endsnippet
+
+snippet bexam "example block" bA
+\begin{eg}[$1]
+	$0
+\end{eg}
+endsnippet
+
+snippet bthm "theorem block" bA
+\begin{thm}[$1]
+	$0
+\end{thm}
+endsnippet
+
+snippet brmk "remark block" bA
+\begin{rmk}
+	$0
+\end{rmk}
+endsnippet
+
+snippet bfact "fact block" bA
+\begin{fact}
+	$0
+\end{fact}
+endsnippet
+
+snippet real3 "three dimensional space" iA
+\R^3
+endsnippet
+
+snippet cdot "cdot" iA
+\cdot
+endsnippet
+
+snippet alp "alpha" iA
+\alpha
+endsnippet
+
+snippet beta "beta" iA
+\beta
+endsnippet
+
+snippet gamma "gamma" iA
+\gamma
+endsnippet
+
+snippet sin "sine function" i
+\sin($1)$0
+endsnippet
+
+snippet cos "cosine function" i
+\cos($1)$0
+endsnippet
+
+snippet tan "tangent function" i
+\tan($1)$0
+endsnippet
+
+snippet curvea "curve named alpha" iA
+\alpha(t)
+endsnippet
+
+snippet curveb "curve named beta" iA
+\beta(t)
+endsnippet
+
+snippet curvey "curve named gamma" iA
+\gamma(t)
+endsnippet
+
+snippet dcurvea "derivative of curve named alpha" iA
+\alpha'(t)
+endsnippet
+
+snippet dcurveb "derivative of curve named beta" iA
+\beta'(t)
+endsnippet
+
+snippet dcurvey "derivative of curve named gamma" iA
+\gamma'(t)
+endsnippet
+
+snippet cnorm "norm" iA
+\|$0\|
+endsnippet
+
+snippet cvela "alpha curve velocity" iA
+\|\alpha'(t)\|
+endsnippet
+
+snippet cvelb "beta curve velocity" iA
+\|\beta'(t)\|
+endsnippet
+
+snippet cvely "gamma curve velocity" iA
+\|\gamma'(t)\|
+endsnippet
+
+snippet bmat "matrix" iA
+\begin{bmatrix} $1 \end{bmatrix} $0
+endsnippet
+ 
