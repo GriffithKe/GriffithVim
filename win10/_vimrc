@@ -35,8 +35,6 @@ set guioptions-=b
 " 使用内置 tab 样式而不是 gui
 set guioptions-=e
 set nolist
-" set listchars=tab:\ ,eol:?,trail:·,extends:>,precedes:<
-set guifont=Inconsolata:h12:cANSI
 " }}}
 
 " Format {{{
@@ -72,12 +70,16 @@ let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6  }  }
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+" Display vertical lines for alignment
+Plugin 'Yggdroot/indentLine'
+
 " Install auto-complete tool
 Plugin 'ycm-core/YouCompleteMe'
 set foldmethod=manual
 
 " Install tree-like file-manager
 Plugin 'preservim/nerdtree'
+Plugin 'ryanoasis/vim-devicons'
 " Start NERDTree when Vim starts with a directory argument.
 autocmd StdinReadPre * let s:std_in=1
 
